@@ -28,7 +28,7 @@ from telegram.ext import (
 
 # ====== SOZLAMALAR (shu joyni to'ldiring) ======
 BOT_TOKEN = "8922202238:AAEJCIQBuSvPjv7lCsPHzV3M8U0GgqUPD8g"
-CHANNEL_ID = 3950560998 kabi raqamli ID
+CHANNEL_ID = -3950560998 kabi raqamli ID
 
 # Savollarni shu yerda o'zgartiring/qo'shing. Har bir savol uchun (kalit, matn).
 QUESTIONS = [
