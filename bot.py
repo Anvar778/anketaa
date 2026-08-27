@@ -105,8 +105,7 @@ async def handle_photo_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         _, next_question, _ = QUESTIONS[next_step]
         await update.message.reply_text(next_question)
         return next_step
-    return await _finish_survey(update, context)
-    else:
+        else:
         # Barcha savollar tugadi — natijani yig'amiz va kanalga yuboramiz
         user = update.effective_user
         lines = ["📋 <b>Yangi anketa</b>\n"]
