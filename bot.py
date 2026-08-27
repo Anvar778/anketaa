@@ -49,7 +49,7 @@ QUESTIONS = [
     ("comment", "Eng kamida qancha maoshga ishlagan bo'lar edingiz?:"),
     ("comment", "Sudlanganmisiz?:"),
     ("comment", "Ijtimoiy tarmoqlarda faolmisiz? Username yozib qoldiring (telegram, instagram):"),
-    ("photo", "Iltimos so'nggi 2 oyda tushga rasmingizni yuboring. ⚠ Agar rasm yuorilmasa anketangiz qabul qilinmaydi:"),
+    ("recent_photo", "Iltimos so'nggi 2 oyda tushga rasmingizni yuboring. ⚠ Agar rasm yuorilmasa anketangiz qabul qilinmaydi:"),
     ("comment", "E'tiboringiz uchun katta raxmat. Tez orada siz bilan bog'lanamiz:"),
 ]
 # ================================================
