@@ -105,27 +105,7 @@ async def handle_photo_answer(update: Update, context: ContextTypes.DEFAULT_TYPE
         _, next_question, _ = QUESTIONS[next_step]
         await update.message.reply_text(next_question)
         return next_step
-        else:
-        # Barcha savollar tugadi — natijani yig'amiz va kanalga yuboramiz
-        user = update.effective_user
-        lines = ["📋 <b>Yangi anketa</b>\n"]
-        for key, question_text in QUESTIONS:
-            lines.append(f"<b>{question_text}</b>\n{context.user_data.get(key, '-')}\n")
-        lines.append(f"👤 Yuboruvchi: @{user.username or user.first_name} (id: {user.id})")
-        result_text = "\n".join(lines)
-
-        try:
-            await context.bot.send_message(
-                chat_id=CHANNEL_ID, text=result_text, parse_mode="HTML"
-            )
-        except Exception as e:
-            logger.error(f"Kanalga yuborishda xatolik: {e}")
-
-        await update.message.reply_text(
-            "Rahmat! Anketangiz qabul qilindi ✅", reply_markup=ReplyKeyboardRemove()
-        )
-        context.user_data.clear()
-        return ConversationHandler.END
+    return await _finish_survey(update, cotext)
 
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
@@ -140,10 +120,12 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 def main() -> None:
     application = Application.builder().token(BOT_TOKEN).build()
 
-    states = {
-        step: [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_answer)]
-        for step in ASKING
-    }
+   states = {}
+    for step, (_, _, q_type) in enumerate(QUESTIONS):
+        if q_type == "photo":
+            states[step] = [MessageHandler(filters.PHOTO, handle_photo_answer)]
+        else:
+            states[step] = [MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text_answer)]
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
