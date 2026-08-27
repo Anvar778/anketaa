@@ -86,6 +86,26 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
         _, next_question = QUESTIONS[next_step]
         await update.message.reply_text(next_question)
         return next_step
+
+async def handle_photo_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    current_step = context.user_data.get("step", 0)
+    key, _, _ = QUESTIONS[current_step]
+
+    if not update.message.photo:
+        await update.message.reply_text("Iltimos, rasm (fotosurat) shaklida yuboring.")
+        return current_step
+
+    # Eng katta o'lchamdagi versiyasini olamiz
+    context.user_data[key] = update.message.photo[-1].file_id
+
+    next_step = current_step + 1
+    context.user_data["step"] = next_step
+
+    if next_step < len(QUESTIONS):
+        _, next_question, _ = QUESTIONS[next_step]
+        await update.message.reply_text(next_question)
+        return next_step
+    return await _finish_survey(update, context)
     else:
         # Barcha savollar tugadi — natijani yig'amiz va kanalga yuboramiz
         user = update.effective_user
