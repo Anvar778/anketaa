@@ -120,7 +120,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 def main() -> None:
     application = Application.builder().token(BOT_TOKEN).build()
 
-   states = { }
+   states=states
     for step, (_, _, q_type) in enumerate(QUESTIONS):
         if q_type == "photo":
             states[step] = [MessageHandler(filters.PHOTO, handle_photo_answer)]
