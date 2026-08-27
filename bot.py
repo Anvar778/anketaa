@@ -129,7 +129,9 @@ def main() -> None:
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states=states,
-        fallbacks=[CommandHandler("cancel", cancel)],
+        fallbacks=[CommandHandler("cancel", cancel),
+        CommandHandler("start", start)],
+        allow_reentry=True,
     )
 
     application.add_handler(conv_handler)
