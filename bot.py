@@ -45,7 +45,7 @@ QUESTIONS = [
     ("reference_contact", "Oxirgi ish joyingizdan siz haqingizda ma'lumot olsak qarshi emasmisiz? O'sha ish joyingizning telefon raqamini yozing.:", "text"),
     ("driver_license", "Haydovchilik guvohnomangiz bormi?:", "text"),
     ("family", "Oilalimisiz? Farzandlaringiz nechta?:", "text"),
-    ("employment_intent", "Siz bizning kompaniyada doimiy ishlamoqchimisiz?:", "text"),
+    ("employment_intent", "Bizning kompaniyada qancha vaqt ishlamoqchisiz? (3 oy, 6 oy, 1 yil, 3 yil):", "text"),
     ("computer_skills", "Kompyuterda ishlashni bilasizmi? (Excel, Word, 1C):", "text"),
     ("contribution", "O'zingizni kompaniya taraqqiyotiga qanday hissa qo'shishingiz mumkin deb o'ylaysiz?:", "text"),
     ("salary_expectation", "Qanday maosh sizni qoniqtiradi?:", "text"),
