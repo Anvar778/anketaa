@@ -31,7 +31,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "8063913200:AAE0YwOH68shW3_4b4Wx0DlM1t63
 CHANNEL_ID = os.environ.get("CHANNEL_ID", "-1003950560998")
 
 # Anketa yakunida ko'rsatiladigan xabar (bu savol emas, oxirgi rahmat xabari)
-FINISH_MESSAGE = "E'tiboringiz uchun katta rahmat. Tez orada anketangizni o'rganib chiqamiz."
+FINISH_MESSAGE = "E'tiboringiz uchun katta rahmat. Tez orada anketangizni o'rganib chiqamiz!"
 
 # Savollar — har biri: (noyob_kalit, savol_matni, turi)
 QUESTIONS = [
