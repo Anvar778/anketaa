@@ -42,7 +42,7 @@ QUESTIONS = [
     ("education", "Ma'lumotingiz qanday?:", "text"),
     ("study_status", "Hozirgi vaqtda o'qiysizmi? O'qish joyingiz, kursingiz, ta'lim shaklini yozing:", "text"),
     ("work_history", "Oldin ishlagan ish joylaringiz nomi, ishlagan vaqtingiz va lavozimingizni yozing.:", "text"),
-    ("reference_contact", "Oxirgi ish joyingizdan siz haqingizda ma'lumot olsak qarshi emasmisiz? O'sha ish joyingizning telefon raqamini yozing.:", "text"),
+    ("reference_contact", "Oxirgi ish joyingizdan siz haqingizda ma'lumot olsak qarshi emasmisiz?:", "text"),
     ("driver_license", "Haydovchilik guvohnomangiz bormi?:", "text"),
     ("family", "Oilalimisiz? Farzandlaringiz nechta?:", "text"),
     ("employment_intent", "Bizning kompaniyada qancha vaqt ishlamoqchisiz? (3 oy, 6 oy, 1 yil, 3 yil):", "text"),
