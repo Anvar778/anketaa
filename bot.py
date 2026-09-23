@@ -41,7 +41,7 @@ QUESTIONS = [
     ("address", "Yashash manzilingiz to'liq", "text"),
     ("education", "Ma'lumotingiz qanday?:", "text"),
     ("study_status", "Hozirda siz talabamisiz yoki o'quvchimisiz?", "text"),
-    ("work_history", "Oldin ishlagan ish joylaringiz nomi, ishlagan vaqtingiz va lavozimingizni yozing.:", "text"),
+    ("work_history", "So'nggi ish joyingiz va ishdan bo'shash sababi?", "text"),
     ("reference_contact", "Oxirgi ish joyingizdan siz haqingizda ma'lumot olsak qarshi emasmisiz?:", "text"),
     ("driver_license", "Haydovchilik guvohnomangiz bormi?:", "text"),
     ("family", "Oilalimisiz? Farzandlaringiz nechta?:", "text"),
