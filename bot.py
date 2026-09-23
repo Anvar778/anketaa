@@ -40,7 +40,7 @@ QUESTIONS = [
     ("birth_date", "Tug'ilgan kun,oy,yil:", "text"),
     ("address", "Yashash manzilingiz to'liq", "text"),
     ("education", "Ma'lumotingiz qanday?:", "text"),
-    ("study_status", "Hozirgi vaqtda o'qiysizmi? O'qish joyingiz, kursingiz, ta'lim shaklini yozing:", "text"),
+    ("study_status", "Hozirda siz talabamisiz yoki o'quvchimisiz?", "text"),
     ("work_history", "Oldin ishlagan ish joylaringiz nomi, ishlagan vaqtingiz va lavozimingizni yozing.:", "text"),
     ("reference_contact", "Oxirgi ish joyingizdan siz haqingizda ma'lumot olsak qarshi emasmisiz?:", "text"),
     ("driver_license", "Haydovchilik guvohnomangiz bormi?:", "text"),
